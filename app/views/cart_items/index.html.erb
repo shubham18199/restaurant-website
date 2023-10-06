@@ -1,0 +1,29 @@
+<div class="add-cart">
+<h1>Your Cart</h1>
+<div class="cart-items">
+<% current_user.cart_items.each do |cart_item| %>
+  <div class="cart-item">
+  <%= image_tag(cart_item.menu_item.image, class: 'cart-img') %>
+    <p><%= cart_item.menu_item.name %></p>
+    <p>$<%= cart_item.menu_item.price %></p>
+   Quantity: 1
+   
+    
+   
+    <%= link_to cart_item_path(cart_item), class: 'btn-rem', data: {
+                turbo_method: :delete,
+                turbo_confirm: "Are you sure?"
+              } do %>
+  <i class="fa-solid fa-trash"></i> 
+<% end %>
+              
+  </div>
+<% end %>
+</div>
+<p>Total: <%= @cart%></p>
+ <%= link_to 'Checkout', checkout_cart_items_path, class: 'btn btn-primary',data: {
+                    turbo_method: :post,
+                    turbo_confirm: "Are you sure?"
+                  } %> 
+
+</div>                  

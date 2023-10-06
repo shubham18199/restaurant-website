@@ -1,0 +1,8 @@
+<h1>Checkout</h1>
+<p>Total: <%= calculate_total %></p>
+<%= link_to 'Place Order', orders_path, method: :post, class: 'btn btn-success' %>
+
+ <%= form_with(url: cart_items_path, method: :post) do |form| %>
+      <%= form.hidden_field :menu_item_id, value: item.id %>
+      <%= form.submit 'Add to Cart' %>
+      <% end %>

@@ -1,0 +1,12 @@
+<h1>Reservation</h1>
+<h2><%= @reservation.name %></h2>
+    <p><%= @reservation.email %></p>
+    <p><%= @reservation.phone %></p>
+    <p><%= @reservation.seats %></p>
+    <p><%= @reservation.date %></p>
+    <p><%= @reservation.time %></p>
+     <%= link_to 'Edit Reservation', edit_reservation_path %>
+     <li><%= link_to "Delete Reservation", reservation_path(@reservation), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %></li>

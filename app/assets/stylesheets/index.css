@@ -1,0 +1,405 @@
+*{margin:0;padding:0;box-sizing:border-box;}
+
+nav{
+    position: relative !important;
+}
+.nav-item a i{
+  font-size: 1.3rem;
+}
+.navbar-brand{
+    font-size: 2rem!important;
+}
+.nav-link{
+  color: white!important;
+}
+.nav-button{
+  padding: 5px;
+  color: white;
+  background: rgb(239, 79, 95);
+  border: 1px solid rgb(239, 79, 95);
+  border-radius: 25px;
+  font-size: 1rem;
+  width: 100px;
+  transition: all 0.3s ease-in-out;
+}
+.nav-button:hover{
+  transform: scale(0.9);
+}
+.home{
+  width:100%;
+  height:90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color:white;
+
+}
+.home-button{
+  padding: 10px;
+    background: rgb(239, 79, 95);
+    color: white;
+    outline: none;
+    border: 1px solid rgb(239, 79, 95);
+    transition: all 0.3s ease-in-out;
+}
+.home-button a{
+  text-decoration: none;
+  color: white;
+}
+.home-button:hover{
+  transform: scale(1.1);
+}
+.home h1{
+  font-size: 3.5rem;
+  margin-bottom: 30px;
+}
+.home p{
+    font-size: 1.6rem;
+}
+.home::before{
+  content:'';
+  background:url('assets/banner.jpeg') no-repeat center center/cover;
+  position: absolute;
+  top:0px;
+  left:0px;
+  right:0px;
+  bottom:0px;
+  width:100%;
+  height:100%;
+  z-index:-1;
+
+
+}
+.home::after{
+  content:'';
+  background:black;
+  position: absolute;
+  top:0px;
+  left:0px;
+  right:0px;
+  bottom:0px;
+  width:100%;
+  height:100%;
+  z-index:-1;
+  opacity:0.5;
+}
+.about{
+    width:100%;
+    height:90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color:white;
+}
+.about::before{
+    content:'';
+    background:url('assets/about.jpeg') no-repeat center center/cover;
+    position: absolute;
+    top:0px;
+    left:0px;
+    right:0px;
+    bottom:0px;
+    width:100%;
+    height:100%;
+    z-index:-1;  
+}
+.about::after{
+  content:'';
+  background:black;
+  position: absolute;
+  top:0px;
+  left:0px;
+  right:0px;
+  bottom:0px;
+  width:100%;
+  height:100%;
+  z-index:-1;
+  opacity:0.5;
+}
+
+.menu{
+  width:100%;
+    height:90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color:white;
+}
+.menu::before{
+  content:'';
+    background:url('assets/menu.webp') no-repeat center center/cover;
+    position: absolute;
+    top:0px;
+    left:0px;
+    right:0px;
+    bottom:0px;
+    width:100%;
+    height:100%;
+    z-index:-1; 
+}
+.menu::after{
+  content:'';
+  background:black;
+  position: absolute;
+  top:0px;
+  left:0px;
+  right:0px;
+  bottom:0px;
+  width:100%;
+  height:100%;
+  z-index:-1;
+  opacity:0.5;
+}
+
+.contact{
+  width:100%;
+    height:90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color:white;
+}
+.contact::before{
+  content:'';
+    background:url('assets/reservation.jpeg') no-repeat center center/cover;
+    position: absolute;
+    top:0px;
+    left:0px;
+    right:0px;
+    bottom:0px;
+    width:100%;
+    height:100%;
+    z-index:-1; 
+}
+.contact::after{
+  content:'';
+  background:black;
+  position: absolute;
+  top:0px;
+  left:0px;
+  right:0px;
+  bottom:0px;
+  width:100%;
+  height:100%;
+  z-index:-1;
+  opacity:0.5;
+}
+.our-menu{
+  margin-top:50px;
+  padding:40px 0px;
+  width:100%;
+  height:auto;
+}
+.our-menu h1{
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 60px;
+}
+.menu p{
+  font-size: 2.5rem;
+}
+.menu-items{
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+  grid-template-rows: repeat(5,480px);
+  grid-gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+.menu-item{
+  width:100%;
+  height: 100%;
+  padding:10px;
+  box-shadow: 1px 1px 10px 3px rgb(0 0 0 / 20%);
+  transition:all 0.2s ease-in;
+  text-align: center;
+  /* overflow: hidden; */
+}
+.menu-item:hover{
+
+  transform: scale(0.9);
+}
+
+.menu-item img{
+  width: 81%;
+  height: 278px;
+  /* text-align: center; */
+  /* margin: auto; */
+  
+  border-radius: 50%;
+  transition: all 0.2s ease-in-out;
+}
+.menu-item img:hover{
+  transform: scale(0.9);
+}
+
+.menu-item input[type="submit"]{
+  background: rgb(239, 79, 95);
+  color: white;
+  border: 1px solid rgb(239, 79, 95);
+  padding: 10px;
+  width: 265px;
+  border-radius: 25px;
+}
+.menu-item .add-to-cart-button{
+  background: rgb(239, 79, 95);
+  color: white;
+  border: 1px solid rgb(239, 79, 95);
+  padding: 10px;
+  width: 265px;
+  border-radius: 25px;
+}
+.reservation{
+  width:100%;
+  height:95vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:white;
+}
+.reserve{
+  width: 100%;
+}
+.reservation::before{
+  content:'';
+    background:url('assets/reservation.jpeg') no-repeat center center/cover;
+    position: absolute;
+    top:0px;
+    left:0px;
+    right:0px;
+    bottom:0px;
+    width:100%;
+    height:100%;
+    z-index:-1; 
+}
+.reservation::after{
+  content:'';
+    background:black;
+    position: absolute;
+    top:0px;
+    left:0px;
+    right:0px;
+    bottom:0px;
+    width:100%;
+    height:100%;
+    z-index:-1;
+    opacity:0.5; 
+}
+.reservation h2{
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 25px;
+}
+.reservation form{
+  width:100%;
+  height:auto;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.reservation form input{
+  width:50%;
+  padding:10px;
+  margin-bottom:20px;
+  outline:none;
+
+}
+.reservation form input[type="submit"]{
+  width:10%;
+  padding:15px 10px;
+  background:#dd5903;
+  color:white;
+  cursor:pointer;
+  border:1px solid orangered;
+  font-size: 1.1rem;
+}
+.reservation form label{
+  font-size: 1.4rem;
+}
+
+
+/* add to cart */
+.add-cart{
+  width: 100%;
+    height: auto;
+    margin-top: 25px;
+    padding: 15px 0px;
+}
+.add-cart h1{
+  text-align: center;
+  font-size: 2.7rem;
+  margin-bottom: 30px;
+}
+.cart-items{
+  width: 800px;
+  height: auto;
+  margin: auto;
+}
+
+
+.cart-item{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom:15px;
+}
+.cart-item img{
+  width:180px;
+}
+
+.order-item img{
+  width: 200px;
+}
+
+.sign-in{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:90vh;
+}
+.sign-in .log-in{
+  padding: 10px;
+  width: 300px;
+  height: 380px;
+  text-align: center;
+  box-shadow: 1px 1px 10px 3px rgb(0 0 0 / 20%);
+}
+.sign-in .log-in h2{
+  margin-top: 10px;
+    font-size: 2rem;
+}
+.log-in form{
+  margin-top:15px;
+  margin-bottom: 18px;
+}
+.log-in form .field{
+  margin-top:10px;
+}
+.log-in form .actions input{
+  background-image: linear-gradient(45deg, rgb(84, 15, 84),rgb(243, 24, 46) );
+  color: white;
+  font-size: 1rem;
+  margin-top: 10px;
+  cursor: pointer;
+  border: none;
+}
+.log-in form .field label{
+  font-size: 1.2rem;
+}
+.log-in form input{
+  width:250px;
+  padding:10px;
+}
+.log-in form input[type="checkbox"]{
+  width:10px;
+}

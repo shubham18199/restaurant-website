@@ -1,0 +1,15 @@
+<h2>Your Cart</h2>
+<div class="cart-items">
+  <% current_user.cart_items.each do |item| %>
+    <div class="cart-item">
+  <%= item.menu_item.name %>
+  Quantity: <%= form_with(model: item, url: cart_item_path(item), method: :patch) do |form| %>
+    <%= form.number_field :quantity, min: 1 %>
+    <%= form.submit 'Update' %>
+  <% end %>
+  <%= link_to 'Remove', cart_item_path(item), method: :delete %>
+</div>
+  <% end %>
+  <p>Total: $<%= calculate_total %></p>
+  <%= link_to 'Checkout', checkout_cart_items_path, class: 'btn btn-primary' %>
+</div>
